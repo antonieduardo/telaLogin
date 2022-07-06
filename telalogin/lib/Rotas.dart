@@ -1,3 +1,4 @@
+// ignore: file_names
 
 import 'package:telalogin/telas/TelaLogin.dart';
 import 'package:telalogin/telas/TelaRegistro.dart';

@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // ignore: camel_case_types
-class inputText extends StatelessWidget {
+class inputTextSenha extends StatelessWidget {
   final String? placeholder;
+  final String? obscureText;
   // ignore: prefer_const_constructors_in_immutables
-  inputText({super.key, this.placeholder});
+  inputTextSenha({super.key, this.placeholder,  this.obscureText});
 
   @override
   Widget build(BuildContext context) {
     return TextField(   
-      obscureText: false,
       style: GoogleFonts.inter(
         fontSize: 16,
         color: Colors.white,
@@ -24,11 +24,11 @@ class inputText extends StatelessWidget {
         // ignore: prefer_const_constructors
         contentPadding: EdgeInsets.all(10),
         labelText: placeholder,
-          filled: true,
-          fillColor: Colors.white.withOpacity(0.1),
-          labelStyle: TextStyle(
-            color: Colors.white.withOpacity(0.5),
-          ),
+        filled: true,
+        fillColor: Colors.white.withOpacity(0.1),
+        labelStyle: TextStyle(
+          color: Colors.white.withOpacity(0.5),
+        ),
       ),
     );
   }

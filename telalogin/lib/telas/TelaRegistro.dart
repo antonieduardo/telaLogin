@@ -2,9 +2,11 @@
 // ignore_for_file: prefer_const_constructors, duplicate_ignore
 
 import 'package:flutter/material.dart';
+import 'package:telalogin/widgets/inputText_senha.dart';
 
 import '../widgets/inputText_app.dart';
 import '../widgets/titulo_app.dart';
+
 
 class TelaRegistro extends StatelessWidget {
   const TelaRegistro({super.key});
@@ -35,10 +37,10 @@ class TelaRegistro extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: titulo_app('Nova Conta', textAlign: TextAlign.center,)), 
+                  inputText(placeholder: 'Nome'),
                   inputText(placeholder: 'Email'),
-                  inputText(placeholder: 'Senha'),
-                  inputText(placeholder: 'Confirmar senha'),
-                  inputText(placeholder: 'Senha'),
+                  inputTextSenha(placeholder: 'Senha'),
+                  inputTextSenha(placeholder: 'Confirmar senha'),
                   SizedBox(
                     width: double.infinity,
                     child: TextButton(
