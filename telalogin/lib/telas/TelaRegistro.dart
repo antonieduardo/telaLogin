@@ -1,10 +1,13 @@
+// ignore: file_names
 // ignore_for_file: prefer_const_constructors, duplicate_ignore
+
 import 'package:flutter/material.dart';
+
 import '../widgets/inputText_app.dart';
 import '../widgets/titulo_app.dart';
 
-class TelaLogin extends StatelessWidget {
-  const TelaLogin({super.key});
+class TelaRegistro extends StatelessWidget {
+  const TelaRegistro({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +19,14 @@ class TelaLogin extends StatelessWidget {
           padding: const EdgeInsets.all(24),
           child: Center(
           child: ConstrainedBox(
-            constraints: BoxConstraints(maxHeight: 400,maxWidth: 400,),  
+            // ignore: prefer_const_constructors
+            constraints: BoxConstraints(maxWidth: 400),  
             child: Container(
+              // ignore: prefer_const_constructors
               padding: EdgeInsets.all(28),
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.05),
+                // ignore: prefer_const_constructors
                 borderRadius: BorderRadius.all(Radius.circular(24)),
               ),
               child: Wrap(
@@ -28,8 +34,10 @@ class TelaLogin extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: double.infinity,
-                    child: titulo_app('Login', textAlign: TextAlign.center,)), 
+                    child: titulo_app('Nova Conta', textAlign: TextAlign.center,)), 
                   inputText(placeholder: 'Email'),
+                  inputText(placeholder: 'Senha'),
+                  inputText(placeholder: 'Confirmar senha'),
                   inputText(placeholder: 'Senha'),
                   SizedBox(
                     width: double.infinity,
@@ -47,19 +55,19 @@ class TelaLogin extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                           )
                         ),
-                      child: Text('Entrar')
+                      child: Text('Criar Conta')
                     ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [
-                      Text('Não tem uma conta?', style: TextStyle(color: Colors.white),),
+                      Text('Já tem uma conta?', style: TextStyle(color: Colors.white),),
                       GestureDetector(
                         onTap: (){
-                          Navigator.pushNamed(context, '/registrar',);
+                          Navigator.pushNamed(context, '/login',);
                         },
-                        child: Text('Criar conta',style: TextStyle(color: Colors.blue,),)
+                        child: Text('Entrar',style: TextStyle(color: Colors.blue,),)
                       )
                     ],
                   ),
@@ -71,9 +79,5 @@ class TelaLogin extends StatelessWidget {
         )
     ),
   );
+  }
 }
-}
-
-
-
-// ignore: camel_case_types

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:telalogin/Rotas.dart';
 import 'package:telalogin/telas/TelaLogin.dart';
 
 void main() {
@@ -11,6 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/login',
+      routes: rotas,
       title: 'TelaLogin',
       theme: ThemeData(
         primarySwatch: Colors.blue,
