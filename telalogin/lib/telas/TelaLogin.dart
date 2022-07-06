@@ -18,21 +18,17 @@ class TelaLogin extends StatelessWidget {
           child: ConstrainedBox(
             constraints: BoxConstraints(maxHeight: 400,maxWidth: 400,),  
             child: Container(
-              width: double.infinity,
-              height: double.infinity,
               padding: EdgeInsets.all(28),
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.05),
                 borderRadius: BorderRadius.all(Radius.circular(24)),
               ),
-              child: Column(
+              child: Wrap(
+                runSpacing: 20,
                 children: [
                   titulo_app('Login'), 
-                  SizedBox(height: 28,),
                   inputText(placeholder: 'Email'),
-                  SizedBox(height: 25,),
                   inputText(placeholder: 'Senha'),
-                  SizedBox(height: 35,),
                   SizedBox(
                     width: double.infinity,
                     child: TextButton(
@@ -52,7 +48,6 @@ class TelaLogin extends StatelessWidget {
                       child: Text('Entrar')
                     ),
                   ),
-                  SizedBox(height: 25),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     // ignore: prefer_const_literals_to_create_immutables
